@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="styles/navigationbar.css"> -->
+    <link rel="stylesheet" href="styles/plants.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/buy.css">
+    <!-- <link rel="stylesheet" href="styles/lander-info.css"> -->
+</head>
+<body onload="item_load();loaded('cart_body')">
+    <div class="index-navbar">
+        <iframe src="navigationbar.html" frameborder="0"></iframe>
+    </div>
+    <div class="loader-container">
+        <iframe src="loading.html" frameborder="0"></iframe>
+    </div>
+    <div class="cart-container">
+        <!-- <div onclick="remove_item(this.id)" id="cart-item-1" class="cart-box">
+            <div class="cart-info">
+                <div class="cart-name"><h2>Marigold</h2></div>
+                <div class="cart-category">
+                    <div class="category-name"><h3>Flowering Plants (Angiosperms)</h3></div>
+                    <div class="category-sub"><h3>Annuals</h3></div>
+                </div>
+            </div>
+            <div class="cart-img Annuals">
+            </div>
+            <div class="cart-remove"><div class="bg"></div></div>
+        </div> -->
+    </div>
+    <script src="script/plant.js"></script>
+    <script src="script/plant-info.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .5s;
+}
+.cart-container{
+    background-color: #ffffff84;
+    height: fit-content;
+    width: calc( 100% - 2rem);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+}
+.cart-box{
+    flex: 0 0 auto;
+    padding: 1rem;
+    flex-grow: 1;
+    margin: 1rem;
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cart-box:hover{
+    background-color: #ffffff84;
+    /* backdrop-filter: invert(); */
+}
+.cart-box:hover > .cart-remove > .bg{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+.cart-remove{
+    flex: 0 0 0;
+    position: relative;
+}
+.cart-remove > .bg{
+    visibility: hidden;
+    opacity: 0;
+    background-image: url('../icon/remove_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert();
+    position: absolute;
+    left: -3rem;
+    height: 30px;
+    width:50px;
+    /* background-color: #000; */
+}
+.cart-img{
+    margin-left: auto;
+    /* flex: 0 0 11.5rem; */
+    height: 100%;
+    width: 12rem;
+    background-color: #ffffff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cart-info{
+    margin-right: 1rem;
+    flex: 0 0 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cart-box > .cart-info > .cart-name h2{
+    font-weight: 600;
+}
+.cart-box > .cart-info > .cart-category h3{
+    font-weight: 400;
+}
+.cart-box > .cart-info > .cart-category > .category-name{
+    margin-bottom: .3rem;
+}
+.cart-box > .cart-info > .cart-category > .category-sub{
+    border-top: 2px solid ;
+}
+.cart-empty{
+    position: relative;
+    top: 0;
+    height: calc(100vh - calc(50px + 3.3rem));
+    width: 100vw;
+    overflow: hidden;
+    font-size: 7rem;
+    align-self: center;
+    text-align: center;
+    color: #ffffff84;
+    background-color: #00253acc;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+
+.cart-box .Grasses,.cart-box .herbs{
+    background-image: url('../img/lander[8].png');
+}
+.cart-box .Succulents, .cart-box .Cacti{
+    background-image: url('../img/lander[3]-Photoroom.png');
+}
+.cart-box .Herbs{
+    background-image: url('../img/lander[6].png');
+}
+.cart-box .snake{
+    background-image: url('../img/lander[1].png');
+}
+.cart-box .Palms{
+    background-image: url('../img/lander[4]-Photoroom.png');
+}
+.cart-box .Annuals,.cart-box .Perennials,.cart-box .Biennials,.cart-box .Bulbs{
+    background-image: url('../img/lander[2]-Photoroom.png');
+}
+.cart-box .Ferns ,.Mosses{
+    background-image: url('../img/lander[9].png');
+}
+.cart-box .Trees{
+    background-image: url('../img/lander[4]-Photoroom.png');
+}
+.cart-box .Shrubs ,.cart-box .Plants{
+    background-image: url('../img/lander[10].png');
+}
+.cart-box .aqua{
+    background-image: url('../img/lander[7].png');
+}

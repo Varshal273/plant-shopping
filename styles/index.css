@@ -10,8 +10,8 @@ body{
     /* background-color: rgba(0, 100, 0, 0.795); */
     /* background-color: #7a8079; */
     /* background-color: #000088; */
-    /* background-color: #b3a696cc; */
-    background-color: #00253acc;
+    background-color: #b3a696cc;
+    /* background-color: #00253acc; */
     transition: all .2s;
 }
 ::-webkit-scrollbar {

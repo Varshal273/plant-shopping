@@ -134,6 +134,6 @@
 .buy-box .Shrubs ,.buy-box .Plants{
     background-image: url('../img/lander[10].png');
 }
-.buy-box .aqua{
+.buy-box .aqua,.aqua{
     background-image: url('../img/lander[7].png');
 }

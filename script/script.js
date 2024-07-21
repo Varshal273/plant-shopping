@@ -103,7 +103,7 @@ function loaded(a = 'done'){
     loading_a[count] = a;
     console.log("load",count,a);
     count++;
-    if(count >= 4 | a == 'plant_body' | a == 'buy_body'){
+    if(count >= 4 | a == 'plant_body' | a == 'buy_body' | a == 'cart_body'){
         console.log("loading");
         setTimeout(() => {
             loading();

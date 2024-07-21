@@ -566,12 +566,20 @@ function print(a){
         window.open('/buy.html?product='+a,'_self');
     // }, 2000);
 }
+var cart_item_counter = 0;
+if(localStorage.getItem('cart-item-counter') != null){
+    cart_item_counter = localStorage.getItem('cart-item-counter');
+    // console.log(cart_item_counter);
+}
 function cart(a){
     console.log("cart : "+a);
     let cart = document.getElementById(a);
     cart.innerHTML = `<div class="icon cart-checkout"></div>`
-    console.log(cart.innerHTML);
+    console.log(cart.parentElement.parentElement.innerText);
     cart_item[cart_item['length']]= {"name" : `${a.replace('cart-','')}`};
+    cart_item_counter++;
+    localStorage.setItem(`cart-item-${cart_item_counter}`,`${a.replace('cart-','')}`);
+    localStorage.setItem(`cart-item-counter`,`${cart_item_counter}`);
 }
 // doc = document.querySelectorAll('.categories');
 // for(let i=0;i<plants[0].categories['length'];i++){
@@ -618,4 +626,57 @@ function extract(){
     product_name = result;
     document.querySelector('.product-name').innerHTML = `<h2> Name : `+product_name+`</h2>`;
     console.log(result);
+}
+
+function item_load(){
+    if(localStorage.getItem('cart-item-counter') == null | localStorage.getItem('cart-item-counter') == 0){
+        let doc = document.querySelector('.cart-container');
+        doc.innerHTML = `<div class='cart-empty'><br>(EMPTY)<br>^_____^</div>`;
+    }
+    let item_no = localStorage.getItem('cart-item-counter');
+    console.log(item_no);
+    for(let a=1;a<=item_no;a++){
+        if(localStorage.getItem(`cart-item-${a}`) != null | localStorage.getItem(`cart-item-${a}`) != 'NAN'){
+            find_item(localStorage.getItem(`cart-item-${a}`),a);;
+        }
+    }
+}
+function find_item(name,item_number){
+    let doc = document.querySelector('.cart-container');
+    console.log(name);
+    for(let i=0;i<plants[0].categories['length'];i++){
+        for(let j=0;j<plants[0].categories[i].sub_categories['length'];j++){
+            for(let k=0;k<3;k++){
+                if(plants[0].categories[i].sub_categories[j].plant[k].name == name){
+                    let str = `<div id='cart-item-${item_number}' class="cart-box">
+                                    <div class="cart-info">
+                                        <div class="cart-name"><h2>${plants[0].categories[i].sub_categories[j].plant[k].name}</h2></div>
+                                        <div class="cart-category">
+                                            <div class="category-name"><h3>${plants[0].categories[i].name}</h3></div>
+                                            <div class="category-sub"><h3>${plants[0].categories[i].sub_categories[j].name}</h3></div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-img ${plants[0].categories[i].sub_categories[j].name}">
+                                    </div>
+                                    <div onclick='remove_item(this.parentElement.id);' class="cart-remove"><div class="bg"></div></div>
+                                </div>`;
+                    doc.innerHTML += str;
+                    console.log('matched',name)
+                }
+            }
+        }
+    }
+}
+function remove_item(item_id){
+    console.log(item_id);
+    let cart_item_box = document.getElementById(item_id);
+    cart_item_box.style.width = 0;
+    setTimeout(() => {
+        cart_item_box.style.display = 'none';
+    }, 300);
+    console.log('done');
+    // localStorage.removeItem(item_id);
+    localStorage.setItem(item_id,'NAN');
+    // document.querySelector('.cart-container').innerHTML = '';
+    // item_load();
 }
