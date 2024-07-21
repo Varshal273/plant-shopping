@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/navigationbar.css">
+    
+</head>
+<body>
+    <div class="index-navbar">
+        <iframe onload="loaded(this.id)" id="navigationbar-d" src="navigationbar.html" frameborder="0"></iframe>
+    </div>
+    <div class="loader-container">
+        <iframe src="loading.html" frameborder="0"></iframe>
+    </div>
+    <div class="lander-container-1">
+        <iframe onload="loaded(this.id)" id="lander-id" src="lander.html" frameborder="0"></iframe>
+    </div>
+    <div class="container-2">
+        <iframe onload="loaded(this.id)" id="lander-information-id" src="lander-information.html" allow-scripts frameborder="0"></iframe>
+    </div>
+    <div class="container-3">
+        <iframe onload="loaded(this.id)" id="footer-id" src="footer.html" frameborder="0"></iframe>
+    </div>
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="script/plant.js"></script>
+    <script src="script/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

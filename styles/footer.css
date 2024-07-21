@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* footer div{} */
+.footer-container{
+    position: relative;
+    bottom: 0;
+    background-color: #00253acc;
+    background-image: url('../img/bg-image[3].png');
+    background-size: 202px;
+    height: 403.6px;
+    margin: 0;
+    padding: 0;
+}
+.footer-first-row{
+    display: grid;
+    grid-template-columns: 0fr 38fr 0fr;
+    width: 100%;
+    /* backdrop-filter: grayscale(); */
+    height: 44.8px;
+}
+.footer-first-row .name{
+    height: 44.8px;
+    width: 100%;
+    letter-spacing: .5rem;
+    /* font-size: medium; */
+    /* background-color: #9cccb4;
+    background-color: #e16b33;
+    background-color: #fff9df;
+    background-color: #c1c882; */
+    /*background-color: #00253acc;*/
+    background-color: #ffffffee;
+    color: #000;
+    text-align: center;
+}
+.footer-seventh-row .email{
+    height: 44.8px;
+    width: 100%;
+    text-align: center;
+    /* background-color: #fff9df;
+    background-color: #e16b33;
+    background-color: #c1c882; */
+    /*background-color: #00253acc;*/
+    background-color: #ffffffee;
+    color: #000;
+    text-align: center;
+}
+.footer-first-row .name h2{
+    font-family: "Nunito", sans-serif;
+    font-size: larger;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-weight: 900;
+    transform: translate(-50%,-50%);
+}
+.footer-seventh-row .email h2{
+    font-family: "Nunito", sans-serif;
+    font-size: larger;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-weight: 900;
+    transform: translate(-50%,-50%);
+}
+.footer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* backdrop-filter: grayscale(); */
+    /* background-color: #000000ee; */
+    background-color: #00253add;
+    /* background-color: #b3a696dd; */
+    /* backdrop-filter: blur(2px); */
+    transition: all .2s;
+}
+.footer:hover{
+    background-color: #00253acc;
+    /* background-color: #b3a696cc; */
+}
+.footer-link-row{
+    display: grid;
+    grid-template-columns: 9fr 4fr 5fr 2fr 8fr 2fr 5fr 2fr 1fr;
+    text-align: center;
+    
+}
+.footer-link-row .link{
+    background-color: #ffffff84;
+    color: #000;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    transition: all .1s;
+}
+.footer-link-row .link h2{
+    font-weight: 400;
+    font-size: larger;
+    position: relative;
+    letter-spacing: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Source Code Pro", monospace;
+}
+.footer-link-row .link:hover{
+    background-color: #000000ee;
+    color: #fff;
+}
+.footer-third-row .link:hover{
+    font-family: "Nunito", sans-serif;
+    cursor: auto;
+    /*background-color: #00253acc;*/
+    background-color: #ffffffee;
+    color: #000;
+}
+.footer-third-row .link h2{
+    letter-spacing: 0;
+    font-size: larger;
+    font-weight: 800;
+}
+.footer-nineth-row{
+    display: grid;
+    grid-template-columns: 0fr 38fr 0fr;
+    text-align: center;
+}
+.footer-nineth-row .link{
+    height: 44.8px;
+    background-color: #e16b33;
+    background-color: #fff9df;
+    /*background-color: #00253acc;*/
+    background-color: #ffffffee;
+    font-family: "Nunito", sans-serif;
+}
+.footer-nineth-row .link h2{
+    font-size: larger;
+    width: fit-content;
+    font-weight: 500;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* .footer-link-row .whitespace{
+} */
+.footer-third-row .link{
+    background-color: #ffffffcc;
+}
+.footer-link-row .whitespace{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #ffffff88;
+}
+.footer-link-row .tree1 ,.footer-link-row .tree2,.footer-link-row .tree3,.footer-link-row .tree4{
+    background-image: url('../img/tree_icon[3].png');
+    background-size: 179.2px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.footer-link-row .whitespace div{
+    transition: all .2s;
+}
+.footer-link-row .whitespace div:active{
+    /* background-color: #00000022; */
+    backdrop-filter: invert();
+}
+.footer-link-row .tree1{
+    background-position: center 0px;
+}
+.footer-link-row .tree2{
+    background-position: center -44.8px;
+}
+.footer-link-row .tree3{
+    background-position: center -89.6px;
+}
+.footer-link-row .tree4{
+    background-position: center -134.4px;
+}

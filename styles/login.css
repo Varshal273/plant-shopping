@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#login_body{
+    background-color: #3A5A40;
+    height: 100vh;
+    width: 100vw;
+    background: url('../img/image[1].png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: repeat-x;
+    backdrop-filter: blur(10px);
+}
+#login_container{
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60vh;
+    width: 60vw;
+    border-radius: 20px;
+    background-color: #344E41;
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+    justify-content: space-around;
+}
+#login_form{
+    height: 50vh;
+    width: 25vw;
+    background-color: #b3a696;
+    border-radius: 10px;
+}
+#login_img{
+    height: 50vh;
+    width: 25vw;
+    background-color: #588157;
+    border-radius: 10px;
+}
+#login_form form{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
+}
+input{
+    margin: 20px 24px;
+    margin-bottom: 10px;
+    color: #344e41;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    padding: 15px;
+    height: fit-content;
+    width: 20vw;
+    background-color: #dad7cd;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+#login_img{
+    background: url('../img/image[1].png');
+    background-position: bottom;
+    background-size: 25vw;
+    background-repeat: no-repeat;
+}
+
+#login_lbl{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#login_lbl label{
+    color: #fff;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 70px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 5px;
+}
+#login_submit{
+    width: 20vw;
+    margin-bottom: 10px;
+}
+#login_submit input{
+    width: auto;
+    padding: 15px 50px 15px 50px
+    
+}
+#remember_me{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    margin: 0 20px;
+    margin-bottom: 0;
+}
+#remember_me label{
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: fit-content;
+    width: fit-content;
+    color: #005438;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 2px;
+}
+#remember_me label{
+    cursor: pointer;
+}
+#Remember{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    margin-bottom: 0px;
+    font-size: small;
+    padding: 15px;
+    height: 20px;
+    width: 20px;
+    background-color: #005438;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0px;
+}

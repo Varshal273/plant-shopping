@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+.nav-container{
+    position: sticky;
+    background-color: #ffffff22;
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-position: center;
+    background-size: 10rem;
+    z-index: 100;
+}
+.nav-container .tile{
+    height: 50px;
+    min-width: 50px;
+    padding: 0 1rem;
+    background-color: #ffffffcc;
+    /* background-color: #00253acc; */
+    margin: 0 .3rem;
+    transition: all .2s;
+    cursor: pointer;
+}
+.nav-container .nav-left, .nav-container .nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: #00253acc; */
+}
+.tile h2{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: medium;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+.tile .nav-name{
+    letter-spacing: .3rem;
+    color: #fff;
+}
+.tile:has(> .nav-name){
+    background-color: #00253acc;
+    margin-right: 20px;
+    padding: 0 20px;
+}
+.nav-container .tile:hover{
+    filter: invert();
+}
+.icon{
+    height: 100%;
+    width: 100%;
+    filter: invert();
+    background-size: 1.8rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tile .profile{
+    background-image: url('../icon/person_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .cart{
+    background-image: url(../icon/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+}
+.tile .profile-edit{
+    background-image: url('../icon/person_edit_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .cart-checkout{
+    background-image: url('../icon/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .signup{
+    background-image: url('../icon/person_add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+    /* visibility: hidden; */
+}
+.tile .login{
+    background-image: url('../icon/login_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .logout{
+    background-image: url('../icon/logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile h2 a{
+    text-decoration: none;
+    color: inherit;
+}

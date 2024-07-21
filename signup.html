@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+        #result{
+            font-weight: 400;
+            color: #f96363d8;
+        }
+        .label_1{
+            position: absolute;
+            margin: 10px;
+            padding: 10px ;
+            background-color: #344E41;
+            color: #fff;
+            border-radius: 5px;
+            width: fit-content;
+            transition: 1s ease-in-out;
+            transition-duration: 2s;
+        }
+        .label_2{
+            position: absolute;
+            /* background-color: #fff; */
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            height: calc(100% - 80px);
+            align-items: center;
+            margin: 40px 0;
+        }
+        .label_2 label{
+            height: fit-content;
+            background-color: #344E41;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 5px;
+        } 
+        input:disabled,
+        input[disabled]{
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body id="signup_body">  
+    <div class="index-navbar">
+        <iframe src="navigationbar.html" frameborder="0"></iframe>
+    </div>
+    <div id="signup_container">
+        <div id="signup_form">
+            <form name="formfill" target="_blank" method="get">
+                <div id="signup_txt">
+                    <input type="text" name="Username" onclick="user_validation();" oninput="user_validation();" placeholder="USERNAME" required>
+                </div>
+                <div id="signup_txt">
+                    <input type="text" name="Email" onclick="email_validation()" oninput="email_validation();" placeholder="E-mail" required>
+                </div>
+                <div id="signup_password">
+                    <input type="password" name="Password" onclick="password_validation()" oninput="password_validation();" placeholder="PASSWORD" required>
+                </div>
+                <div id="signup_password_1">
+                    <input type="password" name="Confirm_Password" onclick="confirm_password_validation()" oninput="confirm_password_validation();" placeholder="CONFIRM-PASSWORD" required>
+                </div>
+                <div id="signup_lastrow">
+                    <div id="signup_submit">
+                        <input type="submit" name="submit" disabled value="signup">
+                    </div>
+                    <div id="remember_me">
+                        <label for="Remember">Terms and Condition</label>
+                        <input type="checkbox" onclick="checkbox_validation()" name="remember_me" id="Remember" required>    
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="signup_img">
+            <div class="label_1">
+                <label for="" id="result"></label>
+            </div>
+            <div id="signup_lbl">
+                <label for="">sign-up</label>
+            </div>
+        </div>
+        <div class="label_2">
+            <label for="" class="label_3"></label>
+            <label for="" class="label_3"></label>
+            <label for="" class="label_3"></label>
+            <label for="" class="label_3"></label>
+            <label for="" class="label_3"></label>
+        </div>
+    </div>
+    <script src="script/plant.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/signin.js"></script>
+</body>
+</html>

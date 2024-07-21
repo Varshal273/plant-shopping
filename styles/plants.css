@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    color: #000000cc;
+    border-radius: 2px;
+
+}
+.plants-container{
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 0 15px 0; */
+    width: 100vw;
+    background-color: #ffffff88;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    
+    scroll-snap-type: mandatory;
+}
+.plants-container .plant{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all .5s;
+}
+.plant .card-container{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    
+}
+.plant .categories{
+    scroll-snap-stop: always;
+    /* width: 100%; */
+    padding: 10px 20px;
+    margin: 2rem 1.5rem .5rem 1.5rem;
+    background-color: #ffffff88;
+}
+.categories h2{
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+.card-container .card-holder{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    /* padding: 0 20px; */
+}
+.card-holder .cards{
+    flex: 0 0 32rem;
+    margin: 10px 1.5rem;
+    height: 15em;
+    width: 32rem;
+    background-color: #ffffff88;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex-grow: 2;
+    transition: all .2s;
+    
+
+}
+.card-holder .Grasses,.card-holder .herbs{
+    background-image: url('../img/lander[8].png');
+}
+.card-holder .Succulents, .Cacti{
+    background-image: url('../img/lander[3]-Photoroom.png');
+}
+.card-holder .Herbs{
+    background-image: url('../img/lander[6].png');
+}
+.card-holder .snake{
+    background-image: url('../img/lander[1].png');
+}
+.card-holder .Palms{
+    background-image: url('../img/lander[4]-Photoroom.png');
+}
+.card-holder .Annuals,.Perennials,.Biennials,.Bulbs{
+    background-image: url('../img/lander[2]-Photoroom.png');
+}
+.card-holder .Ferns ,.Mosses{
+    background-image: url('../img/lander[9].png');
+}
+.card-holder .Trees{
+    background-image: url('../img/lander[4]-Photoroom.png');
+}
+.card-holder .Shrubs ,.Plants{
+    background-image: url('../img/lander[10].png');
+}
+.card-holder .aqua{
+    background-image: url('../img/lander[7].png');
+}
+.card-holder .cards .name{
+    padding: 0 10px;
+    flex: 0 0 0rem;
+    flex-grow: 2;
+}
+.card-holder .cards .sub-c{
+    padding: 0 10px;
+    flex: 0 0 1rem;
+    flex-grow: 2;
+}
+.card-holder .cards .name h1{
+    font-weight: 600;
+}
+.card-holder .cards .sub-c h1{
+    font-weight: 400;
+    font-size: larger;
+}
+.card-holder .cards .para{
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    /* margin-top:6.3rem; */
+    padding: 10px;
+    flex: 0 0 auto;
+    display: flex;
+    /* background-color: #00000088; */
+}
+.card-holder .cards .para p{
+    /* position: relative;
+    bottom: -60%; */
+    font-weight: 400;
+}
+.card-holder .cards .buttons{
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 3rem;
+    height: 100%;
+    margin-left: auto;
+    width: fit-content;
+    background-color: #00000088;
+    justify-content: space-between;
+    background-position: center;
+    background-size: 10rem;
+    justify-content: right;
+    /* padding: 10px; */
+} 
+.cards > .buttons > .tile{
+    height: 3rem;
+    min-width: 3rem;
+    padding: 0 1rem;
+    /* background-color: #000; */
+    margin: .5rem;
+    transition: all .2s;
+    cursor: pointer;
+    background-color: #ffffffee;
+}
+.icon{
+    height: 100%;
+    width: 100%;
+    filter: invert();
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tile > .profile{
+    background-image: url('../icon/person_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .cart{
+    background-image: url(../icon/shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+}
+.tile .add-cart{
+    background-image: url(../icon/add_shopping_cart_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+}
+.tile .profile-edit{
+    background-image: url('../icon/person_edit_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .cart-checkout{
+    background-image: url('../icon/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .signup{
+    background-image: url('../icon/person_add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+    /* visibility: hidden; */
+}
+.tile .login{
+    background-image: url('../icon/login_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile .logout{
+    background-image: url('../icon/logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.tile:hover{
+    filter: invert();
+}
+.tile h2{
+    width: 5rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: medium;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+.cards:hover{
+    background-color: #ffffffcc;
+    cursor: pointer;
+}
