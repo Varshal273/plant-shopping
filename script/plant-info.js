@@ -677,6 +677,21 @@ function remove_item(item_id){
     console.log('done');
     // localStorage.removeItem(item_id);
     localStorage.setItem(item_id,'NAN');
+    clear_nan();
     // document.querySelector('.cart-container').innerHTML = '';
     // item_load();
+}
+function clear_nan(){
+    let str = 'cart-item-';
+    for(let i = localStorage.getItem('cart-item-counter');i>0;i--){
+        if(localStorage.getItem(str+i) == null | localStorage.getItem(str+i) == 'NAN'){
+            localStorage.setItem('cart-item-counter', localStorage.getItem('cart-item-counter') - 1);
+            localStorage.removeItem(str+i);
+        }
+    }
+    if(localStorage.getItem('cart-item-counter') == '0'){
+        // setTimeout(() => {
+            item_load();
+        // }, 1000);
+    }
 }
