@@ -574,12 +574,23 @@ if(localStorage.getItem('cart-item-counter') != null){
 function cart(a){
     console.log("cart : "+a);
     let cart = document.getElementById(a);
+    try{
+        if(cart.firstChild.classList[1] == 'cart-checkout'){
+            window.open('/cart.html','_self');
+            return 0;
+        }
+        // throw new TypeError("oops");
+        // break;
+    }
+    catch (e) { console.log(e) };
     cart.innerHTML = `<div class="icon cart-checkout"></div>`
-    console.log(cart.parentElement.parentElement.innerText);
+    console.log(cart.firstChild.classList[1]);
     cart_item[cart_item['length']]= {"name" : `${a.replace('cart-','')}`};
     cart_item_counter++;
     localStorage.setItem(`cart-item-${cart_item_counter}`,`${a.replace('cart-','')}`);
     localStorage.setItem(`cart-item-counter`,`${cart_item_counter}`);
+    cart.style.filter = 'invert()';   
+    // cart.style.backgroundColor = '#0000ff84';   
 }
 // doc = document.querySelectorAll('.categories');
 // for(let i=0;i<plants[0].categories['length'];i++){
@@ -685,7 +696,9 @@ function clear_nan(){
     let str = 'cart-item-';
     for(let i = localStorage.getItem('cart-item-counter');i>0;i--){
         if(localStorage.getItem(str+i) == null | localStorage.getItem(str+i) == 'NAN'){
-            localStorage.setItem('cart-item-counter', localStorage.getItem('cart-item-counter') - 1);
+            if(i == localStorage.getItem('cart-item-counter')){
+                localStorage.setItem('cart-item-counter', localStorage.getItem('cart-item-counter') - 1);
+            }
             localStorage.removeItem(str+i);
         }
     }
