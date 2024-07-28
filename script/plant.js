@@ -15,7 +15,7 @@ setTimeout(() => {
     nav_logo_button.addEventListener('click',()=>{
         console.log('logo');
         if((window.location.pathname == '/buy.html') | (window.location.pathname == '/plants.html')){
-            window.open('../plant-shopping/index.html','_self');
+            window.open('https://varshal273.github.io/plant-shopping/index.html','_self');
         }
         // window.open('/index.html','_self');
         toggle();
