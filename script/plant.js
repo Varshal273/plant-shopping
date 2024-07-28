@@ -26,7 +26,7 @@ setTimeout(() => {
         //     start_load();
         // }
         // setTimeout(() => {
-            window.open('../plant-shopping/plants.html','_self')
+            window.open('https://varshal273.github.io/plant-shopping/plants.html','_self')
         // }, 2000);
         // document.querySelector('.lander-container-1').style.display = 'none';
         // document.querySelector('.container-2').style.display = 'none';
