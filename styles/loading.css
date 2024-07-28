@@ -36,25 +36,25 @@ body{
     position: relative;
     top: 100%;
     background-color: #ffffff84;
-    animation: fil-1 2s ease-in-out;
+    animation: fil-1 2s infinite ease-in-out;
 }
 .loading-container > .l2{
     position: relative;
     top: -100%;
     background-color: #00000084;
-    animation: fil-0 2s ease-in-out;
+    animation: fil-0 2s infinite ease-in-out;
 }
 .loading-container > .l3{
     position: relative;
     top: 100%;
     background-color: #ffffff84;
-    animation: fil-1 2s ease-in-out;
+    animation: fil-1 2s infinite ease-in-out;
 }
 .loading-container > .l4{
     position: relative;
     top: -100%;
     background-color: #00000084;
-    animation: fil-0 2s ease-in-out;
+    animation: fil-0 2s infinite ease-in-out;
 }
 @keyframes fil-0{
     0%{
