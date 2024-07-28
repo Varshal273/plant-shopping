@@ -585,7 +585,7 @@ function print(a){
     document.getElementById(a).style.backgroundColor = "#aaffaa88";
     // start_load();
     // setTimeout(() => {
-        window.open('../plant-shopping/buy.html?product='+a,'_self');
+        window.open('https://varshal273.github.io/plant-shopping/buy.html?product='+a,'_self');
     // }, 2000);
 }
 var cart_item_counter = 0;
@@ -598,7 +598,7 @@ function cart(a){
     let cart = document.getElementById(a);
     try{
         if(cart.firstChild.classList[1] == 'cart-checkout'){
-            window.open('../plant-shopping/cart.html','_self');
+            window.open('https://varshal273.github.io/plant-shopping/cart.html','_self');
             return 0;
         }
         // throw new TypeError("oops");
