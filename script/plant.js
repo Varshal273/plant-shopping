@@ -14,7 +14,7 @@ setTimeout(() => {
     nav_cart_button = document.querySelector("iframe").contentDocument.getElementById('nav-cart');
     nav_logo_button.addEventListener('click',()=>{
         console.log('logo');
-        if((window.location.pathname == '/plant-shopping/buy.html') | (window.location.pathname == '/plant-shopping/plants.html')){
+        if((window.location.pathname == '../plant-shopping/buy.html') | (window.location.pathname == '../plant-shopping/plants.html')){
             window.open('../plant-shopping/index.html','_self');
         }
         // window.open('/index.html','_self');
