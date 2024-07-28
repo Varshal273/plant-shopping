@@ -14,12 +14,21 @@ setTimeout(() => {
     nav_cart_button = document.querySelector("iframe").contentDocument.getElementById('nav-cart');
     nav_logo_button.addEventListener('click',()=>{
         console.log('logo');
+<<<<<<< HEAD
+        if((window.location.pathname != '/plant-shopping/cart.html') | window.location.pathname != '/plant-shopping/plants.html') | (window.location.pathname != '/plant-shopping/buy.html')){
+            toggle();
+        }
+        else{
+            window.open('../plant-shopping/index.html','_self');
+        }
+=======
         // if((window.location.pathname == '/plant-shopping/cart.html') | (window.location.pathname == '/plant-shopping/buy.html')){
             window.open('../plant-shopping/index.html','_self');
         // }
         // else{
         //     toggle();
         // }
+>>>>>>> 361b5dceffa46d78616be22084513a0b78c87792
         // window.open('/index.html','_self');
     });
     nav_nav_button.addEventListener('click',()=>{
