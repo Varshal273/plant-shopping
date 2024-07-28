@@ -14,11 +14,11 @@ setTimeout(() => {
     nav_cart_button = document.querySelector("iframe").contentDocument.getElementById('nav-cart');
     nav_logo_button.addEventListener('click',()=>{
         console.log('logo');
-        if((window.location.pathname != '/plant-shopping/cart.html') | (window.location.pathname != '/plant-shopping/plants.html') | (window.location.pathname != '/plant-shopping/buy.html')){
-            toggle();
+        if((window.location.pathname == '/plant-shopping/cart.html') | (window.location.pathname == '/plant-shopping/plants.html') | (window.location.pathname == '/plant-shopping/buy.html')){
+            window.open('../plant-shopping/index.html','_self');
         }
         else{
-            window.open('../plant-shopping/index.html','_self');
+            toggle();
         }
         // window.open('/index.html','_self');
     });
