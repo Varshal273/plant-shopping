@@ -15,7 +15,7 @@ setTimeout(() => {
     nav_logo_button.addEventListener('click',()=>{
         console.log('logo');
         if((window.location.pathname == '/buy.html') | (window.location.pathname == '/plants.html')){
-            window.open('/index.html','_self');
+            window.open('../index.html','_self');
         }
         // window.open('/index.html','_self');
         toggle();
@@ -26,22 +26,22 @@ setTimeout(() => {
         //     start_load();
         // }
         // setTimeout(() => {
-            window.open('/plants.html','_self')
+            window.open('../plants.html','_self')
         // }, 2000);
         // document.querySelector('.lander-container-1').style.display = 'none';
         // document.querySelector('.container-2').style.display = 'none';
     });
     nav_signup_button.addEventListener('click',()=>{
         console.log('nav');
-            window.open('/signup.html','_self')
+            window.open('../signup.html','_self')
     });
     nav_login_button.addEventListener('click',()=>{
         console.log('nav');
-            window.open('/login.html','_self')
+            window.open('../login.html','_self')
     });
     nav_cart_button.addEventListener('click',()=>{
         console.log('nav');
-            window.open('/cart.html','_self')
+            window.open('../cart.html','_self')
     });
 }, 100);
 function start_load(){}
