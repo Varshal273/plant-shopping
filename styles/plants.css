@@ -9,43 +9,113 @@
 }
 .plants-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* margin: 0 0 15px 0; */
     width: 100vw;
     background-color: #ffffff88;
     overflow-x: hidden;
     /* overflow-y: hidden; */
-    
-    scroll-snap-type: mandatory;
+    /* scroll-snap-type: both mandatory; */
 }
 .plants-container .plant{
+    margin-left: 20rem;
     height: 100%;
     width: 100%;
     overflow: hidden;
     transition: all .5s;
 }
+.plants-container > .plant-filter{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: calc(100vh - calc(40px + 2rem));
+    /* width: 20vw; */
+    width: 20rem;
+    background-color: #ffffff88;
+    overflow: scroll;
+    /* padding: 10px; */
+    transition: all .2s;
+}
+.plant-filter > .filter-cat{
+    display: flex;
+    flex-direction: column;
+}
+/* .plant-filter > .filter-cat:hover .filter-sub-cat{
+    display: flex;
+} */
+.plant-filter > .filter-cat > .filter-sub-cat{
+    display: none;
+    flex-direction: column;
+    /* padding: 2rem; */
+}
+.plant-filter > .filter-cat > .filter-sub-cat > .tile{
+    background-color: #ffffff88;
+}
+.plant-filter > .filter-cat > .filter-sub-cat > .tile > h2{
+    font-weight: 400;
+}
+.plant-filter > .filter-cat:first-child{
+    margin-top: 1rem;
+}
+.plant-filter > .filter-cat:last-child{
+    margin-bottom: 1rem;
+}
+.plant-filter > .filter-cat .tile, .plant-filter>.tile{
+    flex: 0 0 auto;
+    min-height: 50px;
+    min-width: 50px;
+    /* padding: 0 1rem; */
+    background-color: #ffffff;
+    /* background-color: #00253acc; */
+    margin: .5rem 1rem;
+    transition: all .2s;
+    cursor: pointer;
+}
+.plant-filter > .filter-cat .tile > h2, .plant-filter > .tile > h2{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: medium;
+    text-align: center;
+    text-wrap: wrap;
+    letter-spacing: .1rem;
+    color: #000;
+}
+.plant-filter > .filter-cat .tile:hover{
+    filter: invert();
+}
+/* .filter-cat > .filter-sub-cat > .tile{
+    margin-left: 1rem;
+    background-color: #000;
+} */
 .plant .card-container{
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    
+    overflow: scroll;
+    /* scroll-snap-type: x mandatory; */
 }
 .plant .categories{
-    scroll-snap-stop: always;
     /* width: 100%; */
     padding: 10px 20px;
     margin: 2rem 1.5rem .5rem 1.5rem;
-    background-color: #ffffff88;
+    background-color: #ffffffcc;
+    background-color: #00253acc;
+    /* scroll-snap-stop: always; */
+    /* scroll-snap-align: start; */
 }
 .categories h2{
     font-size: x-large;
     letter-spacing: 2px;
+    color: #ffffff;
 }
 .card-container .card-holder{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     flex-wrap: wrap;
+    /* scroll-snap-align: start; */
     /* padding: 0 20px; */
 }
 .card-holder .cards{
@@ -62,8 +132,6 @@
     background-position: top right;
     flex-grow: 2;
     transition: all .2s;
-    
-
 }
 .card-holder .Grasses,.card-holder .herbs{
     background-image: url('../img/lander[8].png');
@@ -135,6 +203,7 @@
     margin-left: auto;
     width: fit-content;
     background-color: #00000088;
+    /* background-color: #00253acc; */
     justify-content: space-between;
     background-position: center;
     background-size: 10rem;
@@ -184,10 +253,13 @@
 .tile .logout{
     background-image: url('../icon/logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
 }
-.tile:hover{
+.cards > .buttons > .tile:hover{
     filter: invert();
+    /* background-color: #00253acc; */
+    background-color: #ffdac5cc;
+    /* color: #fff; */
 }
-.tile h2{
+.buttons > .tile h2{
     width: 5rem;
     position: relative;
     top: 50%;

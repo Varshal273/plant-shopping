@@ -3,7 +3,7 @@ const plants = [
         "string": "categories",
         "categories": [
             {
-                "name": "Flowering Plants (Angiosperms)",
+                "name": "Flowering Plants",
                 "sub_categories": [
                     {
                         "name": "Annuals",
@@ -533,11 +533,17 @@ cart_item = [];
 
 let button ='';
 let doc = document.querySelector('.card-container');
+let doc_filter = document.querySelector('.plant-filter');
+let str_filter = '';
 let str = '';
 for(let i=0;i<plants[0].categories['length'];i++){
-    str = `<div class="categories"><h2>`+plants[0].categories[i].name+`</h2></div>`;
+    str = `<div id="${plants[0].categories[i].name}" class="categories"><h2>`+plants[0].categories[i].name+`</h2></div>`;
+    str_filter += `<div class="filter-cat">
+                    <div onclick='filter_tile(this.innerText)' class='tile'><h2>`+plants[0].categories[i].name+`</h2></div>
+                    <div class="filter-sub-cat">`;
     str += `<div class="card-holder">`;
     for(let j=0;j<plants[0].categories[i].sub_categories['length'];j++){
+        str_filter += `<div class="tile"><h2>`+plants[0].categories[i].sub_categories[j].name+`</h2></div>`;
         for(let k=0;k<3;k++){
             str += `<div class="cards `+plants[0].categories[i].sub_categories[j].name+`">
                         <div class="name"><h1>`+plants[0].categories[i].sub_categories[j].plant[k].name+`</h1></div>
@@ -552,12 +558,28 @@ for(let i=0;i<plants[0].categories['length'];i++){
                     </div>`;
         }
     }
+    str_filter += `</div></div>`;
     str += `</div>`;
     if(doc != null){
         doc.innerHTML += str;
     }
 }
-
+if(doc_filter != null){
+    doc_filter.innerHTML += str_filter;
+}
+function filter_tile(a){
+    document.getElementById(a).scrollIntoView({ 
+        behavior: "instant",
+        block: "start",
+        inline: "nearest" });
+        // setTimeout(() => {
+             window.scrollBy({
+                top: -93,
+                left: 0,
+                behavior: 'smooth'
+            });
+        // }, 100);
+}
 function print(a){
     console.log("buy : "+a);
     document.getElementById(a).style.backgroundColor = "#aaffaa88";

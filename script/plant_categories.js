@@ -168,8 +168,8 @@ categories = [
 {"name" : "Ornamental Grasses"},
 {"name" : "Snake Plants"}];
 let doc_plant = document.querySelector('.plant .card-container');
-let str = `<div class="categories"><h2>PLANTS [ सस्य ]</h2></div>
-            <div class="card-holder">`;
+let str = `<div class="categories"><h2>PLANTS</h2></div>
+            <div id="scroll" class="card-holder">`;
 for(let i=0;i<1;i++){
     str+=`<div class="cards grass">
     <div class="name"><h1>`+data.categories['Ornamental Grasses'][i].name+`</h1></div>

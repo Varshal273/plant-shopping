@@ -30,7 +30,7 @@
     /* width: 100%; */
     padding: 10px 20px;
     margin: 2rem 1.5rem .5rem 1.5rem;
-    background-color: #ffffffaa;
+    background-color: #ffffffcc;
 }
 .categories h2{
     font-size: x-large;
@@ -51,7 +51,7 @@
     height: 15em;
     width: 32rem;
     scroll-snap-align: center;
-    background-color: #ffffff88;
+    background-color: #ffffffcc;
     padding: 10px;
     display: flex;
     flex-direction: column;

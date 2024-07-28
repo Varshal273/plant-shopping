@@ -4,10 +4,10 @@ let direction = "right";
 let intervalID;
 function startinterval(){
 intervalID = setInterval(() => {
-    if(count < 2 & direction == "right"){
+    if(count < 27 & direction == "right"){
         document.getElementById('scroll').scrollBy({
             top: 0,
-            left: 1000,
+            left: 500,
             behavior: "smooth",
         });
         count++;
@@ -16,13 +16,13 @@ intervalID = setInterval(() => {
     else if(count > 0 & direction == "left"){
         document.getElementById('scroll').scrollBy({
             top: 0,
-            left: -1000,
+            left: -500,
             behavior: "smooth",
         });
         count--;
         // console.log(count);
     }
-    if(count == 2){
+    if(count == 7){
         direction = "left"
         // console.log(count);
     }
